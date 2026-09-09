@@ -233,8 +233,9 @@
           <h1>Grow into the leader you're already becoming.</h1>
           <p class="lede">I help engineers and engineering managers get unstuck, get visible, and get to the next role — with coaching grounded in years of actually leading platform transformations and scaling teams.</p>
           <div class="btn-row">
-            <button class="btn btn-primary js-cta" data-interest="Discovery call">Book a Free Discovery Call</button>
-            <a class="btn btn-ghost" href="#about">How I Work</a>
+           <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/swaticareercoach/'});return false;">
+              Book a Free Discovery Call
+            </a>
           </div>
         </div>
         <div class="hero-photo" role="img" aria-label="Swati Bansal"></div>
@@ -378,46 +379,6 @@
       <h2>Ready to take the next step?</h2>
       <p style="color:var(--ink-soft);margin-bottom:26px;">Book a free discovery call and let's talk about where you are and where you want to go.</p>
       <button class="btn btn-primary js-cta" data-interest="Discovery call">Book a Free Discovery Call</button>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap" style="border-top:none;padding-top:0;margin-top:0">
-      <div class="contact-grid">
-        <form class="contact-form" id="contactForm">
-          <h3>Send a message</h3>
-          <p>This opens a pre-filled email in your email app — nothing is stored or sent from this page directly.</p>
-
-          <div class="field">
-            <label for="fName">Name</label>
-            <input type="text" id="fName" name="name" required>
-          </div>
-          <div class="field">
-            <label for="fEmail">Your email</label>
-            <input type="email" id="fEmail" name="email" required>
-          </div>
-          <div class="field">
-            <label for="fInterest">I'm interested in</label>
-            <select id="fInterest" name="interest">
-              <option>General inquiry</option>
-              <option>Discovery call</option>
-              <option>IC to Manager transition</option>
-              <option>Engineering leadership coaching</option>
-              <option>Visibility and career positioning</option>
-              <option>The Leadership Shift program</option>
-              <option>Speaking / event invite</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="fMessage">Message</label>
-            <textarea id="fMessage" name="message" placeholder="Tell me a bit about where you are and what you're looking for."></textarea>
-          </div>
-
-          <button type="submit" class="form-submit">Send Message</button>
-          <div class="form-note" id="formNote"></div>
-        </form>
-      </div>
     </div>
   </section>
 
