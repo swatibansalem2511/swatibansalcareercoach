@@ -27,7 +27,7 @@
   "description": "Career and leadership coaching for engineers and engineering managers.",
   "url": "https://swatibansal.coaching/",
   "sameAs": [
-    "https://www.linkedin.com/in/swatibansal",
+    "https://www.linkedin.com/in/swati-bansal-em/",
     "https://x.com/SwatiBansal2511"
   ]
 }
@@ -218,9 +218,7 @@
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#program">Program</a>
-      <a href="#speaking">Speaking</a>
-      <a href="#contact">Contact</a>
-      <button class="nav-cta js-cta" data-interest="General inquiry">Book a Call</button>
+      <button class="nav-cta js-calendly">Book a Call</button>
     </nav>
   </div>
 </header>
@@ -234,13 +232,13 @@
           <p class="eyebrow">Career &amp; Leadership Coaching for Tech</p>
           <h1>Grow into the leader you're already becoming.</h1>
           <p class="lede">I help engineers and engineering managers get unstuck, get visible, and get to the next role — with coaching grounded in years of actually leading platform transformations and scaling teams.</p>
-           <button class="btn btn-primary js-cta">
-           <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/swaticareercoach/'});return false;">
+           <a class="btn btn-primary" href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/swaticareercoach/'});return false;">
               Book a Free Discovery Call
             </a>
           </div>
+          <div class="hero-photo" role="img" aria-label="Swati Bansal"></div>
         </div>
-        <div class="hero-photo" role="img" aria-label="Swati Bansal"></div>
+        
       </div>
     </div>
   </section>
@@ -257,19 +255,19 @@
           <h3>Individual Contributor → Manager</h3>
           <p>You're technically excellent and being pulled toward leadership, or you've just stepped into it. I help you build the judgment, delegation, and people skills the transition actually requires.</p>
           <p class="creds" style="border-top:none;padding-top:0;margin-top:0"><b>Outcome:</b> a delegation system and the confidence to lead your first team.</p>
-          <button class="link-btn js-cta" data-interest="IC to Manager transition">Book a call →</button>
+          <button class="link-btn js-calendly">Book a call →</button>
         </div>
         <div class="service-card">
           <h3>Engineering Leadership Coaching</h3>
           <p>For managers and senior leaders navigating team scaling, platform strategy, or org change. We work on the specific decisions and conversations that are in front of you right now.</p>
           <p class="creds" style="border-top:none;padding-top:0;margin-top:0"><b>Outcome:</b> decisions made, hard conversations had, your team moving again.</p>
-          <button class="link-btn js-cta" data-interest="Engineering leadership coaching">Book a call →</button>
+          <button class="link-btn js-calendly">Book a call →</button>
         </div>
         <div class="service-card">
           <h3>Visibility &amp; Career Positioning</h3>
           <p>You're doing strong work but it isn't translating into recognition, promotion, or the next opportunity. We rebuild how you talk about your impact — on paper, on LinkedIn, and in the room.</p>
           <p class="creds" style="border-top:none;padding-top:0;margin-top:0"><b>Outcome:</b> a sharper narrative that gets you noticed — and the next role.</p>
-          <button class="link-btn js-cta" data-interest="Visibility and career positioning">Book a call →</button>
+          <button class="link-btn js-calendly">Book a call →</button>
         </div>
       </div>
     </div>
@@ -286,7 +284,7 @@
           <p>With 8 years as a leader, coach, I developed a sharp eye for patterns, detail, and visual thinking. I realised that small shifts — in communication, positioning, or approach — can completely change outcomes.I bring together strategic thinking, visual mapping, and action-building expertise — grounded in both cultural sensitivity and practical execution.</p>
           <p class="pull">Coaching sits next to that experience, not apart from it.</p>
           <p>You get a coach who has actually sat in the seat you're trying to grow into.</p>
-           <button class="btn btn-ghost js-cta" data-interest="General inquiry">Get in Touch</button>
+           <button class="btn btn-ghost js-calendly">Get in Touch</button>
         </div>
       </div>
     </div>
@@ -370,7 +368,7 @@
         <div><b>Flexible</b><span>Pace, built around you</span></div>
       </div>
       <div class="btn-row">
-        <button class="btn btn-primary js-cta" data-interest="The Leadership Shift program">Book a Free Intro Call</button>
+        <button class="btn btn-primary js-calendly">Book a Free Intro Call</button>
         <button class="btn btn-ghost js-cta" data-interest="General question">Ask a Question</button>
       </div>
     </div>
@@ -380,7 +378,7 @@
     <div class="wrap">
       <h2>Ready to take the next step?</h2>
       <p style="color:var(--ink-soft);margin-bottom:26px;">Book a free discovery call and let's talk about where you are and where you want to go.</p>
-      <button class="btn btn-primary js-cta" data-interest="Discovery call">Book a Free Discovery Call</button>
+      <button class="btn btn-primary js-calendly">Book a Free Discovery Call</button>
     </div>
   </section>
 
@@ -393,15 +391,14 @@
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#program">Program</a>
-      <a href="#contact">Contact</a>
-      <a href="https://www.linkedin.com/in/swatibansal" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/swati-bansal-em/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </footer>
 
 <script>
   // ── Replace this with your real contact email ──
-  const COACH_EMAIL = "yourname@example.com";
+  const COACH_EMAIL = "swatigermangirl@example.com";
 
   // Mobile menu toggle
   const menuBtn = document.getElementById('menuBtn');
@@ -433,6 +430,14 @@
         select.classList.add('flash-highlight');
         setTimeout(() => select.classList.remove('flash-highlight'), 1400);
       }, 450);
+    });
+  });
+
+  // Booking buttons: open the Calendly discovery call popup
+  document.querySelectorAll('.js-calendly').forEach(btn => {
+    btn.addEventListener('click', () => {
+      Calendly.initPopupWidget({ url: 'https://calendly.com/swaticareercoach/' });
+      navLinks.classList.remove('open');
     });
   });
 
